@@ -11,7 +11,7 @@ This repository contains my personal projects exploring data analysis and insigh
 
 - Business Insights: Translating numbers into actionable insights for decision-making.
 
-## Setup 
+## Setup 🔧
 ### Step 1: Install Microsofr SQL Server
 <img width="1899" height="947" alt="image" src="https://github.com/user-attachments/assets/aa765459-affd-4020-88b6-4810ab542e2d" />
 
@@ -33,3 +33,17 @@ What it does:
 - Lets you type, run, and visualize SQL queries.
 - Displays all your databases, tables, and relationships.
 - Helps you create backups, import CSVs, and view results easily.
+
+## Projects 📂
+
+### 1. S&P 500 Stock Market Analysis 📈
+**Description**
+This project explores stock market performance across all S&P 500 companies between January and June 2025.
+
+The goal is to apply SQL for data analysis, uncovering trends, volatility, and performance patterns across sectors and companies.
+
+
+
+
+
+
