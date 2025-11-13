@@ -44,7 +44,7 @@ The goal is to apply SQL for data analysis, uncovering trends, volatility, and p
 ##### **Project Link:**
 [🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmeS%26P.md)
 ##### **Dataset Source:**
-[🔗Kaggle - Customer Sales Dataset](https://www.kaggle.com/datasets/codebynadiia/s-and-p-500-stocks-trade-data-for-first-6-month-2025)
+[🔗Kaggle - S&P 500 Stock Market](https://www.kaggle.com/datasets/codebynadiia/s-and-p-500-stocks-trade-data-for-first-6-month-2025)
 
 
 
