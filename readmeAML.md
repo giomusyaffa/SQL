@@ -28,13 +28,16 @@ This project uses a **Fraudulent Transactions** dataset from Kaggle to perform d
 ## Step 1
 Import the .csv file into the dataset that you made in SQL
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b37adb11-db72-40e9-aa68-3cc3d23410dc" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ff6d1c31-0e24-44cb-aabc-890ff697b3b1" />
+
 
 As you can see from the picture above I already made my dataset for this project called "Portfolio", and then to import the .csv file that you've download from Kaggle, go to tasks, and import flat file.
 
-<img width="1161" height="1075" alt="image" src="https://github.com/user-attachments/assets/1c84cf5e-9f21-4759-9871-a159a117b77f" />
+Then, after inputting the file you would see something like this
 
-Then choose your file, and it's going to show something like this:
+<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/fe8986c3-4ad1-422f-b60d-c8c0360ce807" />
 
-<img width="1160" height="1077" alt="image" src="https://github.com/user-attachments/assets/8a15abe4-f915-48b9-a676-0bac1ac74d73" />
+Now, let's start writing the queries.
 
+## Step 2
+### 1. Sentiment Overview
