@@ -6,8 +6,7 @@ The goal for this project is to demonstrate real-world SQL analysis, similar to 
 
 
 ## Dataset Description  
-- **Source:** Kaggle - Fraudulent Transactions Data  
-- **Data Size:** Transaction-level data  
+- **Source:** Kaggle - Customer Sentiment Dataset
 - **Key Features:**
     - customer_id : unique ID (Primary Key)
     - gender, age_group, region
