@@ -44,7 +44,7 @@ The Customer Sentiment Dataset contains customer demographics, reviews, ratings,
 This makes it ideal for practicing real-world SQL queries that answer business questions.
 
 ##### **Project Link:**
-[🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmeS%26P.md)
+[🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmesentiment.md)
 ##### **Dataset Source:**
 [🔗Customer Sentiment Dataset](https://www.kaggle.com/datasets/kundanbedmutha/customer-sentiment-dataset)
 
