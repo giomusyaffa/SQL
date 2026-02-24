@@ -1,4 +1,4 @@
-# Step-by-Step Analysis on The Screen Time, Sleep & Stress Analysis Dataset Dataset 😴📱☕
+# Step-by-Step Analysis on The Raw Sales Dataset for RFM Customer Segmentation 💸
 
 ## Project Overview  
 This project analyzes the correlation between screen time, sleep quality, stress level, caffeine intake, etc.
