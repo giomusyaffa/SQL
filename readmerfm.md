@@ -1,64 +1,41 @@
-# Step-by-Step Analysis on The Raw Sales Dataset for RFM Customer Segmentation 💸
+# Step-by-Step Analysis on The E-Commerce Customer RFM Dataset 💸
 
 ## Project Overview  
-This project analyzes the correlation between screen time, sleep quality, stress level, caffeine intake, etc.
-
+This project cleans and analyzes a customer segmentation technique that evaluates client value based on three metrics: Recency (last purchase date), Frequency (number of transactions), and Monetary Value (total spent). 
 ## Dataset Description  
-- **Source:** Kaggle - Screen Time, Sleep & Stress Analysis
+- **Source:** Kaggle - EDA, RFM, Ad Strategy & Cost Optimization
 - **Key Features:**
-    - Age
-    - Gender
-    - Occupation
-    - Device_Type
-    - Daily_Phone_Hours
-    - Social_Media_Hours
-    - Work_Productivity_Score
-    - Sleep_Hours
-    - Stress_Level
-    - App_Usage_Count
-    - Caffeine_Intake_Cups
-    - Weekend_Screen_Time_Hours
+    - CustomerID
+    - Demographics (Gender, Age, Country, City)
+    - Branch info
+    - Last Purchase Date
+    - Total Transactions
+    - Total Spent
+    - Currency
+    - Payment Type
+    - Credit Limit
 
 ## SQL Analysis / Queries  
 1. Data Quality Checks (NULL & Duplicate Values)
-2. Distribution Analysis
-3. Multi-Factor Group Analysis
+2. Customer Demographic Analysis
+3. Revenue Analysis
+4. Payment Behavior Analysis
+5. Recency Analysis
 
 ## Step 1: Data Quality Checks
-### 1. Check NULL Values
-Before analyzing this data, the first thing we have to do is to check for NULL Values
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/98914d3c-0d66-461f-b2ab-aba9a01e787e" />
+### 1. Check Anomaly Values
+Before analyzing this data, the first thing we have to do is to check for NULL Values.
 
-As we can see from the query above, by using the `CASE WHEN` statement, which is a conditional expression that will return a value when the condition is met (same like if statement in Excel), 
+Right on top, we can see that when selecting the first 1000 lines, there are a couple anomaly that show, which are in `Age`, showing ages above 100, and `Country` showing Invalid_Country.
 
-`SUM(CASE WHEN User_ID IS NULL THEN 1 ELSE 0 END) AS column name`
+<img width="1497" height="939" alt="image" src="https://github.com/user-attachments/assets/1f134e74-b522-4e82-b40d-c3164d96d82c" />
 
-will return `1` when there is a NULL Value and `0` if there isn't 
+I also recheck the `Gender` column using `SELECT DISTINCT`, we see that there is a `nan` value, which is an anomaly.
 
-### 2. Duplicate Values
-This is also important to check to avoid unnecessary errors in analyzing the data
-<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/2d0c1222-71a8-47c5-9aa2-8224ce57058e" />
+<img width="1500" height="660" alt="image" src="https://github.com/user-attachments/assets/a3cd53dd-e4a0-4572-a534-5a4d02c2c0c8" />
 
-As we can see from the query above, by using the `HAVING` clause  with the `COUNT()` function, we can filter groups of data based on the count of rows within each group.
+So, seeing as there are a lot of anomaly in this dataset let's make a clean copy, NEVER update raw data directly, always create a cleaned version of the table.
 
-In this case, for the User ID, it is crucial not to have duplicate values.
+<img width="1496" height="887" alt="image" src="https://github.com/user-attachments/assets/6cef32e8-fd6d-40aa-b3c1-e0592d1b9e19" />
 
-
-Now, after checking that this dataset doesn't have any missing or duplicated values, we can start to analyze it.
-
-## Step 2: Distribution Analysis
-### 1. Stress Level Distribution
-Let's see the percentage of users in each level of stress from 1 to 10
-<img width="1610" height="937" alt="image" src="https://github.com/user-attachments/assets/57fc5031-42da-407b-a084-7ae9511166c5" />
-
-By using this query, the stress distribution is pretty even, averaging about 5000 users for each level of stress, so there's no dominant point where the users peak at a certain level, meaning most users are not stressed.
-
-### 2. Age Distribution
-To really see the demographic in this dataset, I classify ages between 18 - 24, 25 - 34, 35 - 44, 45 - 54, and 55 +
-
-<img width="1619" height="899" alt="image" src="https://github.com/user-attachments/assets/4a076163-2c1c-4697-a697-9b07b8765b74" />
-
-As we can see in the query above, ages 25 - 54 are significantly higher than other age groups, which is true for this project, seeing how that range is most likely digital natives.
-
-## Step 3: Multi-Factor Group Analysis
-### 1. Sleep V Stress
+By using this, we can safely clean `arpand_ecommerce_cleaned`
