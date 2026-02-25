@@ -163,4 +163,7 @@ Which is why the number is so high, but let's continue the analysis.
 
 <img width="1503" height="930" alt="image" src="https://github.com/user-attachments/assets/94b3e9fa-0c82-44a8-bbcd-3e23cdab4f8d" />
 
-Let's create the relative recency within a closed dataset, here we put 500 in the recently active class, because it is closer to the minimum (369), and (800) in the  moderately inactive, closer to the average (737), and numbers above that we classify as highly inactive.
+The query above is the relative recency within a closed dataset, here we put 500 in the recently active class, because it is closer to the minimum (369 days), and (800 days) in the  moderately inactive, closer to the average (737 days), and numbers above that we classify as highly inactive.
+
+Due to the historical nature of the dataset (minimum recency = 369 days), standard 30/90-day activity thresholds were not applicable. Recency segmentation was instead derived using the nearest value distribution to create meaningful relative customer groupings.
+
