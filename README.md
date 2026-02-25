@@ -53,7 +53,7 @@ This makes it ideal for practicing real-world SQL queries that answer business q
 Segmented customers using distribution-based recency and analyzed revenue, demographics, and payment behavior.
 
 ##### **Project Link:**
-[🔗View Detailed Project Here](ttps://github.com/giomusyaffa/SQL/blob/main/readmerfm.md)
+[🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmerfm.md)
 ##### **Dataset Source:**
 [🔗Customer Sentiment Dataset](https://www.kaggle.com/datasets/aliazimieco/rfm-dataset?select=arpand_ecommerce_dataset.csv)
 
