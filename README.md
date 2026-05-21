@@ -57,5 +57,11 @@ Segmented customers using distribution-based recency and analyzed revenue, demog
 ##### **Dataset Source:**
 [🔗Customer Sentiment Dataset](https://www.kaggle.com/datasets/aliazimieco/rfm-dataset?select=arpand_ecommerce_dataset.csv)
 
-
+### 3. Social Media Addiction & Mental Health Analysis 💳
+**Description**
+In this portfolio, I am trying to use JOINS, CTE, UNION, SUBQUERY, ETC to their maximum potential, since this dataset has 10 tables with one primary key, which is USER_ID.
+##### **Project Link:**
+[🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmerfm.md)
+##### **Dataset Source:**
+[🔗Customer Sentiment Dataset](https://www.kaggle.com/datasets/abdulmaliklodhra/social-media-addiction-and-mental-health-dataset?resource=download)
 
