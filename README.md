@@ -50,6 +50,7 @@ This makes it ideal for practicing real-world SQL queries that answer business q
 
 ### 2. RFM Analysis 💳
 **Description**
+
 Segmented customers using distribution-based recency and analyzed revenue, demographics, and payment behavior.
 
 ##### **Project Link:**
@@ -59,7 +60,8 @@ Segmented customers using distribution-based recency and analyzed revenue, demog
 
 ### 3. Social Media Addiction & Mental Health Analysis 💳
 **Description**
-In this portfolio, I am trying to use JOINS, CTE, UNION, SUBQUERY, ETC to their maximum potential, since this dataset has 10 tables with one primary key, which is USER_ID.
+
+In this portfolio, I am using JOINS, CTE, UNION, SUBQUERY, ETC to their maximum potential, since this dataset has 10 tables with one primary key, which is USER_ID.
 ##### **Project Link:**
 [🔗View Detailed Project Here](https://github.com/giomusyaffa/SQL/blob/main/readmesocmed.md)
 ##### **Dataset Source:**
