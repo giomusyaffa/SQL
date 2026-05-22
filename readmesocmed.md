@@ -78,7 +78,7 @@ A digital wellness company wants to identify which social media platform is asso
 
 Sort the results by average depression score in descending order.
 
-- Tables Used:
+Tables Used:
 - social_media_usage
 - mental_health_trends
 
@@ -99,48 +99,15 @@ ORDER BY average_depres_score DESC;
 ---
 
 ### 3. 
-A behavioral analytics company wants to identify the top 10 most digitally addicted users. 
+A psychologist wants to identify users whose depression score is above the global average depression score. Write a query to return:
 
-Addiction score is calculated as:
-
-` (daily_screen_time_hours * 10) + (doomscrolling_frequency * 3) + dopamine_trigger_score + reward_loop_frequency + engagement_boost_factor `
-
-Return:
 - user_id
-- addiction_score
+- depression_score
 
-Sort by highest addiction score first and return only the top 10 users.
+Sort the results by depression score in descending order.
 
 Tables Used:
-- social_media_usage
-- dopamine_trigger_metrics
-- ai_recommendation_impact
-
-```sql
-WITH AddictionScores AS (
-    SELECT
-        sm.user_id,
-        (
-            sm.daily_screen_time_hours * 10
-            + sm.doomscrolling_frequency * 3
-            + d.dopamine_trigger_score
-            + d.reward_loop_frequency
-            + ai.engagement_boost_factor
-        ) AS addiction_score
-    FROM social_media_usage sm
-    JOIN dopamine_trigger_metrics d ON sm.user_id = d.user_id
-    JOIN ai_recommendation_impact ai ON sm.user_id = ai.user_id
-)
-SELECT TOP 10
-    user_id,
-    addiction_score
-FROM AddictionScores
-ORDER BY addiction_score DESC;
-```
-
----
-
-### 4. Users With Above Average Depression
+- mental_health_trends
 ```sql
 SELECT
     user_id,
@@ -149,22 +116,50 @@ FROM mental_health_trends
 WHERE depression_score > (SELECT AVG(depression_score) FROM mental_health_trends)
 ORDER BY depression_score DESC;
 ```
+<img width="1406" height="937" alt="image" src="https://github.com/user-attachments/assets/93702187-8046-46ac-8231-a3239ca272c5" />
 
 ---
 
-### 5. Does Doomscrolling Affect Sleep?
+### 4.
+A sleep research institute wants to investigate whether doomscrolling behavior affects sleep quality. Write a query to return:
+
+- average doomscrolling frequency
+- average sleep quality score
+- average insomnia risk score
+
+using the relevant tables.
+
+Tables Used:
+- social_media_usage
+- sleep_disruption
+
 ```sql
-SELECT
-    AVG(sm.doomscrolling_frequency) AS avg_doomscrolling,
-    AVG(sl.sleep_quality_score) AS avg_sleep_quality,
-    AVG(sl.insomnia_risk_score) AS avg_insomnia_risk
-FROM social_media_usage sm
-JOIN sleep_disruption sl ON sm.user_id = sl.user_id;
+SELECT 
+AVG (smu.doomscrolling_frequency) AS doomsc_freq, 
+AVG (sd.sleep_quality_score) AS sleep_qual_scr,
+AVG (sd.fatigue_level) AS fatigue_lvl
+FROM social_media_usage smu
+JOIN sleep_disruption sd
+ON smu.user_id = sd.user_id;
 ```
+<img width="1400" height="940" alt="image" src="https://github.com/user-attachments/assets/cab30bcc-adf6-4538-aea5-5469d8572507" />
 
 ---
 
-### 6. Platform With Highest Anxiety
+### 5. 
+A social media company wants to determine which platform has the highest average anxiety levels among users. Write a query to return:
+
+- platform
+- average anxiety score
+- average daily screen time
+- total users
+
+Sort the results by average anxiety score in descending order.
+
+Tables Used:
+- social_media_usage
+- mental_health_trends
+
 ```sql
 SELECT
     sm.platform,
@@ -176,26 +171,56 @@ JOIN mental_health_trends m ON sm.user_id = m.user_id
 GROUP BY sm.platform
 ORDER BY avg_anxiety DESC;
 ```
+<img width="1403" height="942" alt="image" src="https://github.com/user-attachments/assets/4c14d709-0300-4c38-b85e-97b8e22a05f9" />
 
 ---
 
-### 7. Successful Detox Users
+### 6. 
+A digital detox startup wants to identify users who successfully completed a detox program. Write a query to return:
+
+- user_id
+- detox duration
+- wellbeing improvement score
+- anxiety score
+- depression score
+
+Only include users whose detox was successful. Sort by highest wellbeing improvement score first.
+
+Tables Used:
+- digital_detox_behavior
+- mental_health_trends
+
 ```sql
-SELECT
-    d.user_id,
-    d.detox_duration_days,
-    d.wellbeing_improvement_score,
-    m.anxiety_score,
-    m.depression_score
-FROM digital_detox_behavior d
-JOIN mental_health_trends m ON d.user_id = m.user_id
-WHERE d.successful_detox = 1
+SELECT 
+	d.user_id, 
+	d.offline_activity_hours_weekly, 
+	d.wellbeing_improvement_score,
+	m.anxiety_score,
+	m.depression_score
+FROM mental_health_trends m
+JOIN digital_detox_behavior d
+ON m.user_id = d.user_id
+WHERE d.successful_detox = '1'
 ORDER BY d.wellbeing_improvement_score DESC;
+
 ```
+<img width="1407" height="936" alt="image" src="https://github.com/user-attachments/assets/5d476e65-0011-46d5-8e96-a5b1e68794c1" />
 
 ---
 
-### 8. Users Who Never Attempted Detox
+### 7.
+A mental health organization wants to identify users who never attempted a digital detox program. Write a query to return:
+
+- user_id
+- anxiety score
+- depression score
+
+using the appropriate join logic.
+
+Tables Used:
+- mental_health_trends
+- digital_detox_behavior
+  
 ```sql
 SELECT
     m.user_id,
@@ -205,6 +230,8 @@ FROM mental_health_trends m
 LEFT JOIN digital_detox_behavior d ON m.user_id = d.user_id
 WHERE d.user_id IS NULL;
 ```
+<img width="1402" height="934" alt="image" src="https://github.com/user-attachments/assets/53627c30-7e7e-4dfb-90b0-4bb297496e44" />
+
 
 ---
 
