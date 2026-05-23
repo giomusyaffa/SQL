@@ -235,38 +235,76 @@ WHERE d.user_id IS NULL;
 
 ---
 
-### 9. Countries With Highest Depression
+### 8. 
+A global research institute wants to compare mental health trends across countries. Write a query to return:
+
+- country
+- average depression score
+- average anxiety score
+
+Sort by highest average depression score first.
+
+Tables Used:
+mental_health_trends
+
 ```sql
 SELECT
-    country,
-    AVG(depression_score) AS avg_depression,
-    AVG(anxiety_score) AS avg_anxiety
+	country,
+	AVG (depression_score) AS Average_Depr_scr,
+	AVG (anxiety_score) AS Average_anxiety_scr
 FROM mental_health_trends
 GROUP BY country
-ORDER BY avg_depression DESC;
+ORDER BY Average_anxiety_scr DESC;
 ```
+<img width="1409" height="929" alt="image" src="https://github.com/user-attachments/assets/d14d938b-64c8-4080-8b04-b206bc073621" />
 
 ---
 
-### 10. Teen Social Comparison vs Body Image Anxiety
+### 9. 
+A youth behavior study wants to analyze whether social comparison behavior increases body image anxiety among teenagers. Write a query to return:
+
+- average social comparison index
+- average body image anxiety score
+- average peer pressure score
+
+Tables Used:
+teen_behavior_patterns
+
 ```sql
 SELECT
-    AVG(social_comparison_index) AS avg_social_comparison,
-    AVG(body_image_anxiety_score) AS avg_body_image_anxiety,
-    AVG(peer_pressure_score) AS avg_peer_pressure
+	AVG (social_comparison_index) AS avg_comp_index,
+	AVG (body_image_anxiety_score) AS avg_body_img_anx_scr,
+	AVG (peer_pressure_score) AS avg_peer_press_scr
 FROM teen_behavior_patterns;
 ```
+<img width="1409" height="941" alt="image" src="https://github.com/user-attachments/assets/b31f525e-a08c-4035-bc0b-65242c597bd2" />
 
 ---
 
-### 11. Rank Users by Anxiety Score
+### 10. 
+A global mental health institute wants to rank countries based on stress levels. Write a query to return:
+
+- user_id
+- stress_level
+- rank based on highest anxiety score
+
+using an appropriate window function.
+
+Tables Used:
+mental_health_trends
+
 ```sql
 SELECT
-    user_id,
-    anxiety_score,
-    RANK() OVER (ORDER BY anxiety_score DESC) AS anxiety_rank
-FROM mental_health_trends;
+	country,
+	ROUND (AVG (stress_level), 1) AS score,
+	ROW_NUMBER() OVER(ORDER BY ROUND (AVG (stress_level), 1) DESC) AS row_number,
+	RANK() OVER(ORDER BY ROUND (AVG (stress_level), 1) DESC) AS rank,
+	DENSE_RANK() OVER(ORDER BY ROUND (AVG (stress_level), 1) DESC) AS dense_rank
+FROM mental_health_trends
+GROUP BY country
+ORDER BY score DESC;
 ```
+<img width="1385" height="941" alt="image" src="https://github.com/user-attachments/assets/378768ec-d385-49f6-8116-9ec93d02c657" />
 
 ---
 
