@@ -62,7 +62,8 @@ GROUP BY
 	END
 ORDER BY average_anxiety_score DESC;
 ```
-<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/95ece01f-0038-446a-bfbf-00d2532392b6" />
+<img width="525" height="201" alt="image" src="https://github.com/user-attachments/assets/06786919-3d30-4fb0-b28a-4c92539e1e96" />
+
 
 
 
@@ -94,7 +95,8 @@ ON m.user_id = s.user_id
 GROUP BY m.platform
 ORDER BY average_depres_score DESC;
 ```
-<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f4787764-ef8d-40c1-b884-33acc5310cae" />
+<img width="681" height="367" alt="image" src="https://github.com/user-attachments/assets/db07b9fb-81f6-437a-bea7-85b1eedd46f6" />
+
 
 ---
 
@@ -230,7 +232,8 @@ FROM mental_health_trends m
 LEFT JOIN digital_detox_behavior d ON m.user_id = d.user_id
 WHERE d.user_id IS NULL;
 ```
-<img width="1402" height="934" alt="image" src="https://github.com/user-attachments/assets/53627c30-7e7e-4dfb-90b0-4bb297496e44" />
+<img width="1353" height="606" alt="image" src="https://github.com/user-attachments/assets/fb54e7e8-eefa-46bd-a527-c565d49cef0a" />
+
 
 
 ---
@@ -256,7 +259,8 @@ FROM mental_health_trends
 GROUP BY country
 ORDER BY Average_anxiety_scr DESC;
 ```
-<img width="1409" height="929" alt="image" src="https://github.com/user-attachments/assets/d14d938b-64c8-4080-8b04-b206bc073621" />
+<img width="500" height="581" alt="image" src="https://github.com/user-attachments/assets/548bf535-efdf-4f80-8976-bb4feb9b3e5e" />
+
 
 ---
 
@@ -277,7 +281,8 @@ SELECT
 	AVG (peer_pressure_score) AS avg_peer_press_scr
 FROM teen_behavior_patterns;
 ```
-<img width="1409" height="941" alt="image" src="https://github.com/user-attachments/assets/b31f525e-a08c-4035-bc0b-65242c597bd2" />
+<img width="584" height="105" alt="image" src="https://github.com/user-attachments/assets/1684991a-e6ce-4620-877e-5c74eb8637e3" />
+
 
 ---
 
@@ -304,7 +309,8 @@ FROM mental_health_trends
 GROUP BY country
 ORDER BY score DESC;
 ```
-<img width="1385" height="941" alt="image" src="https://github.com/user-attachments/assets/378768ec-d385-49f6-8116-9ec93d02c657" />
+<img width="481" height="570" alt="image" src="https://github.com/user-attachments/assets/2d027196-c663-4676-85a6-91568d095660" />
+
 
 ---
 
