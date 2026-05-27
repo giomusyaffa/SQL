@@ -126,6 +126,101 @@ FROM retail_fraud_detection_100k;
 <img width="1252" height="439" alt="image" src="https://github.com/user-attachments/assets/f633dc03-c046-4b2f-9e6a-c8ca78ab0ac3" />
 
 
+### 6. DATEPART ()
+
+
+#### Code
+ ```sql
+SELECT 
+transaction_timestamp,
+DATEPART(MILLISECOND,( transaction_timestamp)) AS millisecond,
+DATEPART(MINUTE,( transaction_timestamp)) AS minute,
+DATEPART(hour,( transaction_timestamp)) AS hour,
+DATEPART(day,( transaction_timestamp)) AS day,
+DATEPART(DAYOFYEAR,( transaction_timestamp)) AS day_of_year,
+DATEPART(MONTH,( transaction_timestamp)) AS month
+
+FROM retail_fraud_detection_100k;
+```
+
+#### Output
+<img width="1408" height="503" alt="image" src="https://github.com/user-attachments/assets/e297f754-09df-46e9-a198-65242a2be84e" />
+
+#### Explanation
+Here we can see, by using 
+
+
+### 7. DATENAME ()
+
+
+#### Code
+ ```sql
+SELECT 
+transaction_timestamp,
+
+DATENAME(WEEKDAY,( transaction_timestamp)) AS day,
+DATENAME(MONTH,( transaction_timestamp)) AS month
+
+FROM retail_fraud_detection_100k;
+```
+
+#### Output
+<img width="1410" height="532" alt="image" src="https://github.com/user-attachments/assets/989e5181-6a1a-4be3-9c55-4ea852368064" />
+
+
+
+
+
+#### Explanation
+Here we can see, by using 
+
+
+### 8. DATETRUNC ()
+
+
+#### Code
+ ```sql
+SELECT 
+transaction_timestamp,
+
+DATETRUNC(Minute,( transaction_timestamp)) AS Time1,
+DATETRUNC(Hour,( transaction_timestamp)) AS Time2,
+DATETRUNC(Day,( transaction_timestamp)) AS Time3
+
+FROM retail_fraud_detection_100k;
+```
+
+#### Output
+<img width="1405" height="501" alt="image" src="https://github.com/user-attachments/assets/8f57cc57-c699-4bce-8225-50ec5effbda6" />
+
+
+
+
+
+#### Explanation
+Here we can see, by using 
+
+<img width="1402" height="471" alt="image" src="https://github.com/user-attachments/assets/0d83fc9a-5f81-476c-91a8-c0989d465271" />
+
+Here we have a different table containig two different time data, booking date and appointment date.
+The obvious analysis for the time data is to count the different between those two and we use:
+
+### . DATEDIFF ()
+
+
+#### Code
+ ```sql
+SELECT booking_date, appointment_date,
+DATEDIFF(day,booking_date,appointment_date) AS differenceindays,
+DATEDIFF(month,booking_date,appointment_date) AS differenceinmonths
+FROM patient_no_show_dataset
+```
+
+#### Output
+<img width="1402" height="500" alt="image" src="https://github.com/user-attachments/assets/c9eb1a0c-3f6c-45c8-af52-aabab4d7179b" />
+
+
+
 
 
 
