@@ -23,7 +23,9 @@ This cheat sheet covers practical SQL techniques I've been exploring, from ranki
 
 ## 🪟 Window Functions
 
-Window functions let you perform calculations **across a set of rows related to the current row** — without collapsing them into a single output like `GROUP BY` does. Think of it as running an aggregation while still keeping every individual row visible.
+Window functions let you perform calculations **across a set of rows related to the current row**, without collapsing them into a single output like `GROUP BY` does. 
+
+Think of it as running an aggregation while still keeping every individual row visible.
 
 **Scenario:** 
 
