@@ -1,4 +1,4 @@
-# 🗃️ Things That SQL Can Do — Compiled in One File
+# 🗃️ Things That SQL Can Do, Compiled in One File
 
 > **Source:** [Retail Intelligence Fraud Detection Dataset — Kaggle](https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-fraud-detection-dataset)
 
@@ -25,7 +25,11 @@ This cheat sheet covers practical SQL techniques I've been exploring, from ranki
 
 Window functions let you perform calculations **across a set of rows related to the current row** — without collapsing them into a single output like `GROUP BY` does. Think of it as running an aggregation while still keeping every individual row visible.
 
-**Scenario:** We have a table of transactions across different countries. Our goal is to rank which countries have the **highest average transaction amount**.
+**Scenario:** 
+
+We have a table of transactions across different countries. 
+
+Our goal is to rank which countries have the **highest average transaction amount**.
 
 <img width="1761" height="361" alt="image" src="https://github.com/user-attachments/assets/2dbc82c2-a8a3-42da-b033-c922246d4980" />
 
