@@ -2,7 +2,9 @@
 
 > **Source:** [Retail Intelligence Fraud Detection Dataset Kaggle](https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-fraud-detection-dataset)
 
-This cheat sheet covers practical SQL techniques I've been exploring, from ranking functions to date manipulation. More sections coming soon!
+This cheat sheet covers practical SQL techniques I've been exploring, from ranking functions to date manipulation. 
+
+More sections coming soon!
 
 ---
 
@@ -126,7 +128,7 @@ The top row always gets 0.0 and the bottom always gets 1.0.
 
 ### 🔍 Bonus: Filtering Top N Results
 
-What if you only want to see the **Top 3 countries**? Since you can't use a window function directly in a `WHERE` clause, wrap it in a subquery:
+What if you only want to see the **Top 3 countries**?
 
 #### 💻 Code
 ```sql
