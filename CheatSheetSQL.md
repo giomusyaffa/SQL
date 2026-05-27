@@ -1,6 +1,6 @@
 # 🗃️ Things That SQL Can Do, Compiled in One File
 
-> **Source:** [Retail Intelligence Fraud Detection Dataset — Kaggle](https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-fraud-detection-dataset)
+> **Source:** [Retail Intelligence Fraud Detection Dataset Kaggle](https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-fraud-detection-dataset)
 
 This cheat sheet covers practical SQL techniques I've been exploring, from ranking functions to date manipulation. More sections coming soon!
 
@@ -93,7 +93,7 @@ GROUP BY location;
 
 #### 📝 Explanation
 RANK() also gives tied rows the same rank, but skips numbers afterward to account for the tie. 
-USA, Germany, and India all get rank 1 — so the next rank jumps to 4, not 2.
+USA, Germany, and India all get rank 1, so the next rank jumps to 4, not 2.
 
 ---
 
@@ -201,7 +201,7 @@ FROM retail_fraud_detection_100k;
 <img width="1408" height="503" alt="image" src="https://github.com/user-attachments/assets/e297f754-09df-46e9-a198-65242a2be84e" />
 
 #### 📝 Explanation
-DATEPART() extracts a specific numeric component from a datetime — hour, day, month, etc. For example, 
+DATEPART() extracts a specific numeric component from a datetime, hour, day, month, etc. For example, 
 DATEPART(MONTH, '2026-03-04') returns 3. Useful for grouping or filtering by a particular time unit.
 
 ---
@@ -244,7 +244,7 @@ FROM retail_fraud_detection_100k;
 
 
 #### 📝 Explanation
-DATETRUNC() snaps a datetime down to the start of the specified unit — minute, hour, day, etc. 
+DATETRUNC() snaps a datetime down to the start of the specified unit, minute, hour, day, etc. 
 It returns a full datetime with the smaller units zeroed out, making it great for grouping transactions into time buckets.
 
 ---
